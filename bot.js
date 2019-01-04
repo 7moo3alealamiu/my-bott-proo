@@ -20,10 +20,6 @@ if (message.content.startsWith(adminprefix + 'tw')) {
 }
 });
 
-//-------------------------------------------------------------نهاية السورس الاساسي--------------------------------------------------------------------------------------------------------------
-
-//كود انفينت 
-
 client.on('message' , message => {
  
     if (message.content === "~inv") {
@@ -41,8 +37,6 @@ https://discordapp.com/api/oauth2/authorize?client_id=522572942807400449&permiss
   message.author.sendEmbed(embed);
    }
 });
-
-//كود الهيلب
 
 client.on("message", message => {
   var prefix = "*";
@@ -92,8 +86,6 @@ const embed = new Discord.RichEmbed()
  }
  });
 
-
-//كود الكيك والبان
 client.on('message', message => {
   if (!message.content.startsWith(prefix)) return;
  
@@ -453,8 +445,6 @@ client.on('message', async message => {
   } // حقوق الفا كودز
 });
 
-//بعض الرد التلقائي 
-
 client.on('message', msg => {
   if (msg.content === 'السلام عليكم') {
     msg.reply('وعليكم السلام ورحمة الله تعالى وبركاته :heart:');
@@ -494,8 +484,6 @@ client.on('message', msg => {
       if (!channel) return;
       channel.sendEmbed(embed);
 });
-
-//كود امر عمل تصويت من البوت في روم مخصص
 
 client.on('message' , message => {
   var prefix = "~";
@@ -560,8 +548,6 @@ if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('لي�
  
 });
 
-//ثاني كود معنا هوا البرودكاست البشكل جميل
-
 client.on('message', message => {
         var prefix = "~";
               if(!message.channel.guild) return;
@@ -604,7 +590,6 @@ client.on('message', message => {
     })
     }
     });
-//كود منع النشر
 
 client.on('message', message => {
     var args = message.content.split(/[ ]+/)
@@ -614,8 +599,6 @@ client.on('message', message => {
     return message.reply(`**ممنوع نشر الروابط من فضلك تجنبا للميوت:x:**`)
     }
 });
-
-// برودكست كلام فقد
 
 client.on('message', message => {
             if(!message.channel.guild) return;
@@ -629,8 +612,6 @@ m.sendMessage(args)
 })
 }
 });
-
-// كود الوقت 
 
 var p = "~";
 client.on('message', message => {
@@ -696,8 +677,6 @@ client.on('message', message => {
         }
     });
 
-//للترحيب علي خاص 
-
 client.on("guildMemberAdd", member => {
   member.createDM().then(function (channel) {
   return channel.send(`:hearts:منور السيرفر:hearts:
@@ -705,8 +684,6 @@ client.on("guildMemberAdd", member => {
 أنت العضو رقم: : ${member.guild.memberCount} `) 
 }).catch(console.error)
 })
-
-// للخروج العضو 
 
 client.on('guildMemberRemove', Sal => { //By Salto7#4595
   var embed = new Discord.RichEmbed()
@@ -726,16 +703,12 @@ client.on('guildMemberRemove', Sal => { //By Salto7#4595
   channel.send({embed : embed});
   });
 
-//للشكر الاونر علي اضافت البوت
-
 client.on('guildCreate', guild => {
   var embed = new Discord.RichEmbed()
   .setColor(0x5500ff)
   .setDescription('شكراً لك لإضافه البوت الى سيرفرك')
       guild.owner.send(embed)
 });
-
-//رد البوت عند المنشنة له
 
 client.on('message', message=> {
     if (message.author.bot) return;
@@ -744,8 +717,6 @@ client.on('message', message=> {
     message.reply("هلا امرني اذا تبي مساعده اكتب ~help");
     }
 });
-
-//كود انشاء 200 لون 
 
 client.on('message', function(message) {
     if(!message.channel.guild) return;
@@ -774,8 +745,6 @@ client.on('message', function(message) {
     }
     });
 
-// لمعرفت عدد المتبندين 
-
 client.on('message', message => {
     if (message.content.startsWith("~bans")) {
      if(!message.guild.member(message.author).hasPermission("BAN_MEMBERS")) return message.reply("**انت لا تملك صلاحية الباند**");
@@ -786,8 +755,6 @@ client.on('message', message => {
   .catch(console.error);
 }
 });
-
-//لمعرفت معلومات علي حسابك 
 
     client.on('message', message => {
      if (message.content === "~id") {
@@ -808,15 +775,11 @@ client.on('message', message => {
     }
 });
 
-//كود سيرفر المساعدة 
-
 client.on('message', msg => {
   if (msg.content === '~suppport') {
     msg.reply('السيرفر للمساعده,https://discord.gg/nDDY7c');
   }
 });
-
-//كود منع لينكات السيرفرات 
 
 client.on('message', message => {
     var args = message.content.split(/[ ]+/)
@@ -826,8 +789,6 @@ client.on('message', message => {
     return message.reply(`** No Invite Links :angry: ! **`)
     }
 });
-
-// كود مسح بالرقم 
 
 client.on('message', msg => {
   if (msg.author.bot) return;
@@ -853,8 +814,6 @@ client.on('message', msg => {
 }
 });
 
-// كود الاففاتر 
-
 client.on('message', message => {
     if (message.content.startsWith("~avatar")) {
         if (message.author.bot) return
@@ -877,8 +836,6 @@ client.on('message', message => {
     }
 });
 
-// كود سرعة البوت 
-
 client.on("message", message => {
       if (message.content === "~ping") {
       const embed = new Discord.RichEmbed()
@@ -887,8 +844,6 @@ client.on("message", message => {
   message.channel.sendEmbed(embed);
     }
 });
-
-// كود التحذير
 
 client.on('message', msg => {
     if (msg.content.startsWith(`~warn`)) {
@@ -906,8 +861,6 @@ client.on('message', msg => {
       }
     }
 })
-
-//كود الاعلام
 
 client.on('message', msg => {
   if (msg.content === 'السعودية') {      
@@ -1000,8 +953,6 @@ client.on('message', msg => {
   }
 });
 
-// كود التيكت 
-
 client.on("message", (message) => {
     /// ALPHA CODES
    if (message.content.startsWith("~ticket")) {     /// ALPHA CODES
@@ -1057,8 +1008,6 @@ client.on("message", (message) => {
     }
  
 });
-
-// كود معلومات السيرفر 
 
 client.on('message', function(msg) {
     const prefix = '~'
